@@ -1,3 +1,24 @@
+<script setup>
+import { ref } from "vue";
+const opportunityOpen = ref(false);
+const feedbackOpen = ref(false);
+const menuOpen = ref(false);
+const language = ref("th");
+
+const toggleLanguage = () => {
+  language.value = language.value === "th" ? "en" : "th";
+};
+
+const toggleMenu = () => {
+  menuOpen.value = !menuOpen.value;
+};
+const toggleOpportunity = () => {
+  opportunityOpen.value = !opportunityOpen.value;
+};
+const toggleFeedback = () => {
+  feedbackOpen.value = !feedbackOpen.value;
+};
+</script>
 <template>
   <div class="min-h-screen bg-gray-50 flex flex-col">
     <!-- Navbar -->
@@ -234,25 +255,3 @@
     </main>
   </div>
 </template>
-
-<script setup>
-import { ref } from "vue";
-const opportunityOpen = ref(false);
-const feedbackOpen = ref(false);
-const menuOpen = ref(false);
-const language = ref("th");
-
-const toggleLanguage = () => {
-  language.value = language.value === "th" ? "en" : "th";
-};
-
-const toggleMenu = () => {
-  menuOpen.value = !menuOpen.value;
-};
-const toggleOpportunity = () => {
-  opportunityOpen.value = !opportunityOpen.value;
-};
-const toggleFeedback = () => {
-  feedbackOpen.value = !feedbackOpen.value;
-};
-</script>
